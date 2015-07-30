@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+
+</head>
+<body onload="onLoad()">
+<div id="news-index" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>Home</h1>
+    </div>
+
+    <div data-role="content">
+
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper" id="top_news">
+                <!--<div class="swiper-slide"-->
+                <!--style="background-image:url(image/s1.jpg);background-position: center;background-repeat: no-repeat;"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--style="background-image:url(image/s2.jpg);background-position: center;background-repeat: no-repeat;"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--style="background-image:url(image/s3.jpg);background-position: center;background-repeat: no-repeat;"></div>-->
+                <!--<div class="swiper-slide"-->
+                <!--style="background-image:url(image/s4.jpg);background-position: center;background-repeat: no-repeat;"></div>-->
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+
+        <fieldset class="ui-grid-a">
+            <div class="ui-block-a" id="ui-block-a">
+                <!--<div class="index-news-container">
+                    <div class="images-wrapper">
+                        <img src="image/aa.jpg"/>
+
+                        <div class="images-content">
+                            <div class="title">Title</div>
+                            <div class="content">Here is the content content content content content content.</div>
+                            <div class="show">
+                            	<img src="image/like_show.png"/> 10 <img src="image/message_show.png"/> 10
+                            </div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+            <div class="ui-block-b" id="ui-block-b">
+                <!--<div class="index-news-container">
+                    <div class="images-wrapper">
+                        <img src="image/bb.jpg"/>
+
+                        <div class="images-content">
+                            <div class="title">Title</div>
+                            <div class="content">Here is the content content content content content content.</div>
+                            <div class="show"></div>
+                        </div>
+                    </div>
+                </div>-->
+            </div>
+        </fieldset>
+    </div>
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed" id="bodyFooter">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--<div id="news-content" data-role="page">-->
+
+<!--<div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">-->
+<!--<a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text</a>-->
+<!--<h1>News Content</h1>-->
+<!--</div>-->
+
+<!--<div data-role="content">-->
+<!--<div id="news-content-image-container" class="news-content-image-container"></div>-->
+<!--<div id="news-content-title-container" class="news-content-title-container"></div>-->
+<!--<div id="news-content-content-container" class="news-content-content-container"></div>-->
+<!--<div id="news-content-message-container" class="news-content-message-container">-->
+<!--<ul data-role="listview" data-inset="false" id="comment_list">-->
+<!--<li data-role="list-divider">评论历史</li>-->
+<!--&lt;!&ndash;<li>&ndash;&gt;-->
+<!--&lt;!&ndash;<img src="image/avatar.jpg">&ndash;&gt;-->
+<!--&lt;!&ndash;<button class="ui-btn">回复</button>&ndash;&gt;-->
+<!--&lt;!&ndash;<h2>小明</h2>&ndash;&gt;-->
+<!--&lt;!&ndash;<p class="floor">1楼 2015-1-10</p>&ndash;&gt;-->
+<!--&lt;!&ndash;<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>&ndash;&gt;-->
+<!--&lt;!&ndash;</li>&ndash;&gt;-->
+<!--<li data-icon="false" id="comments_load_more">-->
+<!--<a href="#">加载更多</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div data-role="footer" data-tap-toggle="false" data-theme="a" data-position="fixed">-->
+<!--<div data-role="navbar" class="news-content-config-navbar">-->
+<!--<ul>-->
+<!--<li><a href="#" id="doLike"><img src="image/like.png" class="news-content-config-icon" /><span id="likeCount">...</span></a></li>-->
+<!--<li><a href="#" id="go2doComment"><img src="image/message.png" class="news-content-config-icon" /><span id="commentCount">...</span></a></li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<!--<div id="do_comments" data-role="page">-->
+
+<!--<div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">-->
+<!--<a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No text</a>-->
+<!--<h1>News Content</h1>-->
+<!--</div>-->
+
+<!--<div data-role="content">-->
+<!--<textarea autofocus id="edit_comment" placeholder="请文明发言，遵守'七条底线'" cols="40" rows="8" ></textarea>-->
+<!--<h6 id="replied"></h6>-->
+<!--<input type="button" value="提交" id="submit_comment"/>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;popup login window&ndash;&gt;-->
+<!--<div data-role="popup" id="popupLogin" data-overlay-theme="b" data-theme="a" data-corners="false" data-tolerance="15,15">-->
+
+<!--<a href="#" data-rel="back" data-role="button" data-theme="b" data-icon="delete" data-iconpos="notext" class="ui-btn-right">Close</a>-->
+
+<!--<iframe src="qrl.html" seamless></iframe>-->
+<!--</div>-->
+<!--</div>-->
+
+</body>
+<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+<!-- Swiper JS -->
+<script type="text/javascript" src="js/swiper.min.js"></script>
+
+<!-- hifi JS -->
+<script type="text/javascript" src="js/customize/hifi.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.ajaxLinksEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+        var _HiFi_News = new News();
+        _HiFi_News.initTopNews();
+        _HiFi_News.getPublishedNews();
+
+
+    });
+
+    function onBackKeyDown() {
+        console.log("onBackKeyDown");
+        alert($.mobile.activePage + "::" + navigator.app);
+        if ($.mobile.activePage.is('#news-index')) {
+            navigator.app.exitApp();
+        }
+        else {
+            navigator.app.backHistory();
+        }
+    }
+
+    function onDeviceReady() { // Register the event listener
+
+        console.log("onDeviceReady");
+        document.addEventListener("backbutton", onBackKeyDown, false);
+    }
+
+    function onLoad() {
+        console.log("onLoad");
+//        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+</script>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="css/not.the.skin.css">
+    <link rel="stylesheet" href="circle.skin/circle.player.css">
+    <script> var _hmt = _hmt || []; (function() { var hm = document.createElement("script"); hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581"; var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(hm, s); })(); </script>
+</head>
+<body>
+<div id="earTest" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>金耳朵</h1>
+    </div>
+
+    <div data-role="content">
+        <div>
+            <h2>这里要放说明文字</h2>
+        </div>
+        <!-- The jPlayer div must not be hidden. Keep it at the root of the body element to avoid any such problems. -->
+        <div id="jquery_jplayer_1" class="cp-jplayer"></div>
+        <div id="jquery_jplayer_2" class="cp-jplayer"></div>
+
+        <div class="prototype-wrapper"> <!-- A wrapper to emulate use in a webpage and center align -->
+            <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
+            <div id="cp_container_1" class="cp-container">
+                <div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+                    <div class="cp-buffer-1"></div>
+                    <div class="cp-buffer-2"></div>
+                </div>
+                <div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+                    <div class="cp-progress-1"></div>
+                    <div class="cp-progress-2"></div>
+                </div>
+                <div class="cp-circle-control"></div>
+                <ul class="cp-controls">
+                    <li><a class="cp-play" tabindex="1">play</a></li>
+                    <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+                </ul>
+            </div>
+
+           <div id="cp_container_2" class="cp-container">
+                <div class="cp-buffer-holder"> <!-- .cp-gt50 only needed when buffer is > than 50% -->
+                    <div class="cp-buffer-1"></div>
+                    <div class="cp-buffer-2"></div>
+                </div>
+                <div class="cp-progress-holder"> <!-- .cp-gt50 only needed when progress is > than 50% -->
+                    <div class="cp-progress-1"></div>
+                    <div class="cp-progress-2"></div>
+                </div>
+                <div class="cp-circle-control"></div>
+                <ul class="cp-controls">
+                    <li><a class="cp-play" tabindex="1">play</a></li>
+                    <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+                </ul>
+            </div>
+
+
+       </div>
+        <div>
+            <input type="button" value="左侧无损" id="leftBtn"/>
+            <input type="button" value="右侧无损" id="rightBtn"/>
+            <input type="button" value="确定" id="nextStep"/>
+        </div>
+
+    </div>
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed" id="bodyFooter">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="#" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="testRst" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>Home</h1>
+    </div>
+
+    <div data-role="content">
+        <h3 id="rst"></h3>
+        <input type="button" value="重新测试" id="reTest"/>
+    </div>
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="#" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/custom-map.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<script type="text/javascript" src="js/jquery.transform2d.js"></script>
+<script type="text/javascript" src="js/jquery.grab.js"></script>
+<script type="text/javascript" src="js/jquery.jplayer.js"></script>
+<script type="text/javascript" src="js/mod.csstransforms.min.js"></script>
+<script type="text/javascript" src="js/circle.player.js"></script>
+
+
+<!-- Swiper JS -->
+<script src="js/swiper.min.js"></script>
+
+<!-- hifi JS -->
+<script src="js/customize/hifi.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+        var _HiFi_EarTest = new EarTest();
+        _HiFi_EarTest.init();
+    })
+</script>
+</html>

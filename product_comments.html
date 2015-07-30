@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新闻</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+
+</head>
+<body>
+
+<div id="do_comments_p" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No
+            text</a>
+
+        <h1>产品评论</h1>
+    </div>
+
+    <div data-role="content">
+        <textarea autofocus id="edit_comment_production" placeholder="请文明发言，遵守'七条底线'" cols="40" rows="8"></textarea>
+        <div id="user_rating" data-score="0">评分：</div>
+        <h6 id="replied_production"></h6>
+        <input type="button" value="提交" id="submit_comment_production"/>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+
+<!-- Swiper JS -->
+<script type="text/javascript" src="js/swiper.min.js"></script>
+
+<!-- hifi JS -->
+<script type="text/javascript" src="js/customize/hifi.js"></script>
+
+<!-- Initialize Swiper -->
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.ajaxLinksEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+    })
+</script>
+</html>

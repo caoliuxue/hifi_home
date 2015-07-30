@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+</head>
+<body>
+<div id="qrl-login" data-role="page">
+
+    <div data-role="content">
+        <div class="login-form-container">
+            <div class="login-form-title">HIFI 本地账号登陆</div>
+            <div class="line"></div>
+            <div class="login-form-username">
+                <input type="text" id="username_qLogin" value="" placeholder=" 账号:">
+                <img src="image/user.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-password">
+                <input type="password" id="password_qLogin" value="" autocomplete="off"
+                       placeholder=" 密码:">
+                <img src="image/password.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="ui-grid-a">
+                <div class="ui-block-a">
+                    <button class="ui-btn ui-corner-all" id="qlg_btn">登 陆</button>
+                </div>
+                <div class="ui-block-b">
+                    <button class="ui-btn ui-corner-all" id="qGoRegisterBtn">注 册</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/custom-map.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<!-- hifi JS -->
+<script type="text/javascript" src="js/customize/hifi.js"></script>
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.ajaxLinksEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+    })
+</script>
+</html>

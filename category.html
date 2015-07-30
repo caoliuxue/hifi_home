@@ -1,0 +1,234 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>分类</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/jquery.raty.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+</head>
+
+<body>
+
+<div id="category" data-role="page">
+
+    <div data-role="header" data-type-toggle="false" data-theme="b" data-position="fixed">
+        <h1>分类搜索</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+        <!--<div class="category-search-container">-->
+        <!--<input type="search" name="category-search"-->
+        <!--onclick="javascript:window.location.href='#product_list_container'" id="category-search" value=""-->
+        <!--placeholder="点击搜索...">-->
+        <!--</div>-->
+
+        <div id="primary_cat_container" class="category-container" data-role="collapsibleset"
+             data-collapsed-icon="carat-d" data-expanded-icon="carat-u" data-inset="false">
+            <!--<div data-role="collapsible">-->
+            <!--<h3>耳机设备</h3>-->
+            <!--<ul data-role="listview">-->
+            <!--<li><a href="#">Canary</a></li>-->
+            <!--<li><a href="#">Cat</a></li>-->
+            <!--<li><a href="#">Dog</a></li>-->
+            <!--</ul>-->
+            <!--</div>-->
+        </div>
+    </div>
+    <div data-role="footer" data-type-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="#" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="product_list_container" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <a href="#" id="backToCategory" data-rel="back" data-icon="arrow-l"
+           class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No
+            text</a>
+        <a href="#right-panel" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-mini">筛选</a>
+
+        <h1>产品列表</h1>
+    </div>
+
+    <div data-role="panel" id="right-panel" data-display="overlay" data-position="right">
+        <div>
+            <input type="button" id="doFilterBtn" data-rel="close" value="确定"/>
+            <input type="button" id="restFilter" data-rel="close" value="重置"/>
+        </div>
+        <div class="ui-field-contain" id="filter_brand_div">
+            <label for="filter_brand">品牌</label>
+            <select name="filter_brand" id="filter_brand" multiple="multiple" data-native-menu="false">
+                <!--<option id="start">全部</option>-->
+                <!--<option value="2017">Sennheiser</option>-->
+            </select>
+        </div>
+    </div>
+    <div role="main" class="ui-content">
+        <div class="product-list-search-container">
+            <input type="text" name="product-list-search" id="product-list-search" value="" placeholder="关键字"/>
+            <input type="button" id="doSearch" value="搜索"/>
+        </div>
+        <div data-role="navbar" data-inset="false" data-iconpos="right" id="sort_ul">
+            <ul>
+                <li><a id="sort_price" class="ui-btn">价格</a></li>
+                <li><a id="sort_comment" class="ui-btn" data-icon="arrow-u">评价</a></li>
+                <li><a id="sort_recommend" class="ui-btn" data-icon="arrow-u">推荐</a></li>
+            </ul>
+        </div>
+        <div class="product-list-container">
+            <ul id="theList" data-role="listview" data-inset="false">
+            </ul>
+        </div>
+    </div>
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="#" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div id="product_detail" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No
+            text</a>
+
+        <h1>Product detail/can be changed</h1>
+    </div>
+
+    <div data-role="content">
+        <div id="product_detail_image_container" class="news-content-image-container"></div>
+        <div id="product_detail_title_container" class="news-content-title-container"></div>
+        <div data-role="navbar">
+            <ul id="user_status">
+                <li><a id="wanna" href="#">想用</a></li>
+                <li><a id="used" href="#">曾用</a></li>
+                <li><a id="using" href="#">正在用</a></li>
+            </ul>
+        </div>
+        <div id="rating_score" style="margin: 5px auto;">综合评分：</div>
+        <div style="margin-top: 25px;">
+            <ul data-role="listview" id="parameters_list" data-inset="false">
+
+            </ul>
+        </div>
+        <div id="product_detail_content_container" class="news-content-content-container">
+
+        </div>
+        <div id="product-content-article-container" class="news-content-message-container">
+            <ul data-role="listview" data-inset="false" id="article_list">
+                <li data-role="list-divider" id="article_divider">相关文章 更多文章[更多>]</li>
+            </ul>
+        </div>
+
+        <div id="product-comment-container" class="news-content-message-container">
+            <ul data-role="listview" data-inset="false" id="p_comment_list">
+                <li data-role="list-divider">评论历史</li>
+                <!--<li>-->
+                <!--<img src="image/avatar.jpg">-->
+                <!--<button class="ui-btn">回复</button><button class="ui-btn">回复2</button>-->
+                <!--<h2>小明</h2>-->
+                <!--<p class="floor">1楼 2015-1-10</p>-->
+                <!--<p class="floor">1楼 2015-1-10</p>-->
+                <!--<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>-->
+                <!--<ul data-role="listview" data-inset="false">-->
+                <!--<li>-->
+                <!--<img src="image/avatar.jpg">-->
+                <!--<h2>小明</h2>-->
+                <!--<p class="floor">2015-1-10</p>-->
+                <!--<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img src="image/avatar.jpg">-->
+                <!--<h2>小明 2015-1-10</h2>-->
+                <!--<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img src="image/avatar.jpg">-->
+                <!--<h2>小明 2015-1-10</h2>-->
+                <!--<p>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</p>-->
+                <!--</li>-->
+                <!--</ul>-->
+                <!--</li>-->
+                <li data-icon="false" id="p_comments_load_more">
+                    <a href="#">加载更多</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="a" data-position="fixed">
+        <div data-role="navbar" class="news-content-config-navbar">
+            <ul>
+                <li><a href="#" id="go2doPComment"><img src="image/message.png" class="news-content-config-icon"/><span
+                        id="pCommentCount">...</span></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!--<div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed" id="bodyFooter">-->
+    <!--<div data-role="navbar">-->
+    <!--<ul>-->
+    <!--<li><a href="index.html#news-index" data-icon="grid">新闻评测</a></li>-->
+    <!--<li><a href="category.html" data-icon="search">产品目录</a></li>-->
+    <!--<li><a href="ear.html" data-icon="grid">金耳朵</a></li>-->
+    <!--<li><a href="mine.html" data-icon="home">我的</a></li>-->
+    <!--</ul>-->
+    <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+</body>
+<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="js/custom-map.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="js/jquery.raty.js"></script>
+
+
+<!-- hifi JS -->
+<script src="js/customize/hifi.js"></script>
+
+<!-- Initialize page -->
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.ajaxLinksEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+        var _HiFi_category = new Category();
+        _HiFi_category.backToCategory.tap(function () {
+            _HiFi_category.clearProduct();
+        });
+        _HiFi_category.nav_p();
+    });
+</script>
+</html>

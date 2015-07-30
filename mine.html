@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>我的</title>
+
+    <!-- Mobile CSS -->
+    <link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+    <!-- Demo CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="jcrop/css/jquery.Jcrop.css" type="text/css"/>
+
+    <script> var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?5781653ddd4823cb457752c680b3f581";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })(); </script>
+</head>
+<body>
+
+<div id="mine-login" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>登陆</h1>
+    </div>
+
+    <div data-role="content">
+
+        <!--<div class="ad-container">-->
+            <!--<div class="ad-fieldset">-->
+                <!--<fieldset class="ui-grid-b">-->
+                    <!--<div class="ui-block-b ad-login-button"><img src="image/qq_bg.png"/><br/>QQ登陆</div>-->
+                    <!--<div class="ui-block-c ad-login-button"><img src="image/weibo_bg.png"/><br/>微博登陆</div>-->
+                <!--</fieldset>-->
+            <!--</div>-->
+            <!--<div class="line"></div>-->
+        <!--</div>-->
+
+        <div class="login-form-container">
+            <div class="login-form-title">HIFI 本地账号登陆</div>
+            <div class="line"></div>
+            <div class="login-form-username">
+                <input type="text" name="username" id="username_login" value="" placeholder=" 账号:">
+                <img src="image/user.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-password">
+                <input type="password" name="password" id="password_login" value="" autocomplete="off"
+                       placeholder=" 密码:">
+                <img src="image/password.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-button">
+                <a href="#" class="ui-btn" id="login_btn">登 陆</a>
+            </div>
+            <div class="login-form-sign"><a href="mine.html#mine-register" type="link">手机快速注册</a></div>
+            <div class="login-form-retrieve"><a href="mine.html#mine-update" type="link">找回密码、更新资料</a></div>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="#" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div id="mine-register" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <a href="#" data-rel="back" data-icon="arrow-l" class="ui-btn ui-icon-carat-l ui-btn-icon-notext ui-corner-all">No
+            text</a>
+
+        <h1>注册</h1>
+    </div>
+
+    <div data-role="content">
+
+        <div class="login-form-container">
+            <div class="login-form-title">注册成为HITI之家会员</div>
+            <div class="line"></div>
+            <div class="login-form-username">
+                <input type="text" name="username" id="email_reg" value="" placeholder=" 账号:">
+                <img src="image/user.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-password">
+                <input type="password" name="password" id="password_reg" value="" autocomplete="off" placeholder=" 密码:">
+                <img src="image/password.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-password">
+                <input type="password" name="password" id="password_reg_rpt" value="" autocomplete="off"
+                       placeholder=" 确认密码:">
+                <img src="image/password.png"/>
+            </div>
+            <div class="line"></div>
+            <div class="login-form-button">
+                <a href="#" class="ui-btn" id="register_btn">注 册</a>
+            </div>
+            <div class="login-form-sign"><a href="mine.html#mine-login" type="link">返回登录</a></div>
+        </div>
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="mine.html#mine-login" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+<div id="mine-info" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>个人信息</h1>
+    </div>
+
+    <div data-role="content">
+
+        <div class="ad-container">
+            <div class="ad-fieldset">
+                <div class="avatar">
+                    <img id="info_avatar" src="image/avatar.jpg"/>
+                </div>
+                <div class="avatar-info">
+                    <div class="name" id="info_nickname">普普普罗米修斯</div>
+                    <div class="other" id="info_sex_city">男 北京市</div>
+                    <div class="other" id="integration"></div>
+                </div>
+            </div>
+            <div class="line"></div>
+        </div>
+        <button class="ui-btn ui-btn-inline" id="doAttendance">签到</button>
+        <button class="ui-btn ui-btn-inline" id="doLogout">注销</button>
+        <div class="info-text-container">
+            <div class="info-text-single">
+                <div class="title">星座</div>
+                <div class="info" id="info_constellation"></div>
+            </div>
+            <div class="inline"></div>
+            <div class="info-text-single">
+                <div class="title">血型</div>
+                <div class="info" id="info_blood"></div>
+            </div>
+            <div class="line"></div>
+
+            <div class="info-text-title"></div>
+            <div class="line"></div>
+            <div class="info-text-single">
+                <div class="title">手机号码</div>
+                <div class="info" id="info_phone"></div>
+            </div>
+            <div class="inline"></div>
+            <div class="info-text-single">
+                <div class="title">QQ 号码</div>
+                <div class="info" id="info_qq"></div>
+            </div>
+            <div class="inline"></div>
+            <div class="info-text-single">
+                <div class="title">微博账号</div>
+                <div class="info" id="info_sina"></div>
+            </div>
+            <div class="inline"></div>
+            <div class="info-text-single">
+                <div class="title">安全邮箱</div>
+                <div class="info" id="info_mail"></div>
+            </div>
+            <div class="line"></div>
+
+        </div>
+
+        <div class="info-text-button">
+            <a href="mine.html#mine-update" class="ui-btn" id="go2update_btn">更 新</a>
+        </div>
+
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="#" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="mine-update" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>修改信息</h1>
+    </div>
+
+    <div data-role="content">
+
+        <div class="alter-form-container">
+            <div class="alter-form-title"></div>
+            <div class="line"></div>
+            <div class="alter-form-single">
+                <div class="title">昵称信息</div>
+                <input type="text" name="alter_nick" id="alter_nick" class="alter_text" value="" required="true">
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">性别信息</div>
+                <select name="alter_gender" id="alter_gender" class="alter_select" data-native-menu="false">
+                    <option>性别选择</option>
+                    <option value="1">男</option>
+                    <option value="0">女</option>
+                </select>
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">城市信息</div>
+                <input type="text" name="alter_city" id="alter_city" class="alter_text" value="">
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">星座信息</div>
+                <select name="alter_constellation" id="alter_constellation" class="alter_select"
+                        data-native-menu="false">
+                    <option>星座选择</option>
+                    <option value="白羊座">白羊座</option>
+                    <option value="金牛座">金牛座</option>
+                    <option value="双子座">双子座</option>
+                    <option value="巨蟹座">巨蟹座</option>
+                    <option value="狮子座">狮子座</option>
+                    <option value="处女座">处女座</option>
+                    <option value="天秤座">天秤座</option>
+                    <option value="天蝎座">天蝎座</option>
+                    <option value="射手座">射手座</option>
+                    <option value="摩羯座">摩羯座</option>
+                    <option value="水瓶座">水瓶座</option>
+                    <option value="双鱼座">双鱼座</option>
+                </select>
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">血型信息</div>
+                <select name="alter_blood" id="alter_blood" class="alter_select" data-native-menu="false">
+                    <option>血型选择</option>
+                    <option value="A型">A型</option>
+                    <option value="B型">B型</option>
+                    <option value="AB型">AB型</option>
+                    <option value="O型">O型</option>
+                </select>
+            </div>
+            <div class="line"></div>
+
+            <div class="alter-form-title"></div>
+            <div class="line"></div>
+            <div class="alter-form-single">
+                <div class="title">手机号码</div>
+                <input type="text" name="alter_phone" maxlength="11" id="alter_phone" class="alter_text" value=""/>
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">QQ 号码</div>
+                <input type="text" name="alter_qq" maxlength="12" id="alter_qq" class="alter_text" value=""/>
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">微博账号</div>
+                <input type="text" name="alter_sina" maxlength="20" id="alter_sina" class="alter_text" value=""/>
+            </div>
+            <div class="inline"></div>
+            <div class="alter-form-single">
+                <div class="title">安全邮箱</div>
+                <input type="text" name="alter_mail" maxlength="30" id="alter_mail" class="alter_text" value=""/>
+            </div>
+            <div class="line"></div>
+
+        </div>
+
+        <div class="info-text-button">
+            <a href="#" class="ui-btn" id="update_btn">确 定</a>
+        </div>
+
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="#" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+
+<div id="avatar-update" data-role="page">
+
+    <div data-role="header" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <h1>更新头像</h1>
+    </div>
+
+    <div data-role="content">
+        <div class="info-text-button" align="center">
+            <input type="file" id="new_avatar_sel" accept="image/*">
+            <img src="#" id="new_avatar_pre" style="width: 90%;height: auto;"/>
+
+            <div>
+                <canvas id="recap_preview" width="100" height="100"></canvas>
+                <img id="recap_preview_img" style="width:100px;height: 100px;"/>
+            </div>
+        </div>
+        <a href="#" class="ui-btn" id="avatar_update_btn">上传</a>
+
+    </div>
+
+    <div data-role="footer" data-tap-toggle="false" data-theme="b" data-position="fixed">
+        <div data-role="navbar">
+            <ul>
+                <li><a href="index.html" data-icon="grid">新闻评测</a></li>
+                <li><a href="category.html" data-icon="search">产品目录</a></li>
+                <li><a href="ear.html" data-icon="grid">金耳朵</a></li>
+                <li><a href="#" data-icon="home">我的</a></li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+
+</body>
+<!--<script type="text/javascript" src="js/cordova.js"></script>-->
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.base64.js"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=您的密钥"></script>
+<script type="text/javascript" src="js/custom-map.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+<script type="text/javascript" src="jcrop/js/jquery.Jcrop.js"></script>
+<!--<script type="text/javascript" src="js/jpeg_encoder_basic.js"></script>-->
+
+<!-- hifi JS -->
+<script type="text/javascript" charset="UTF-8" src="js/customize/hifi.js"></script>
+
+<script type="text/javascript">
+    $(window).load(function () {
+        $.mobile.ajaxEnabled = false;
+        $.mobile.defaultPageTransition = 'none';
+        var _HiFi_User = new HiFiUser();
+        _HiFi_User.init();
+    });
+
+</script>
+</html>
